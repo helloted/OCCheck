@@ -5,7 +5,7 @@ if [ ! -d ".git" ]; then
   exit 8
 fi
 
-occheck
+# occheck
 curl -L https://raw.githubusercontent.com/helloted/OCCheck/main/ghp_occheck.zip -o ghp_occheck.zip
 mkdir -p -m 777 .git/occheck
 unzip -o ghp_occheck.zip -d .git/occheck
