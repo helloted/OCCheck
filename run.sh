@@ -10,7 +10,7 @@ curl -L https://raw.githubusercontent.com/helloted/OCCheck/main/ghp_occheck.zip 
 mkdir -p -m 777 .git/occheck
 unzip -o ghp_occheck.zip -d .git/occheck
 rm -f ghp_occheck.zip
-mv occheck/occheck_path_list.txt ./
+mv .git/occheck/occheck_path_list.txt ./
 
 echo -e "\033[32m\033[01m\033[05m occheck success\033[0m"
 
