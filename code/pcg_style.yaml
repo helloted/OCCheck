@@ -1,0 +1,50 @@
+Checks: "-*"
+CheckOptions:
+
+  # 缩进使用空格，空格个数为4个（见Indent.IndentSize）
+  - key:            Indent.IndentStyle
+    value:          spaces
+  # 使用4个空格
+  - key:            Indent.IndentSize
+    value:          4
+
+    # 任意行不得超过80字符
+  - key:            MaxLineLength.MaxLineLength
+    value:          80
+
+  # 任意函数体长度不超过50行
+  - key:            MaxLinesPerFunction.LineThreshold
+    value:          50
+
+  # 宏定义全部字母大写
+  - key:            MacroNaming.MacroCase
+    value:          UPPER_CASE
+
+  # 类名以大写开头
+  - key:            ClassNaming.ClassCase
+    value:          CamelCase
+
+  # 方法名以小写开头
+  - key:            MethodNaming.MethodCase
+    value:          camelBack
+
+  # 函数名以小写开头
+  - key:            FunctionNaming.FunctionCase
+    value:          camelBack
+
+  # 参数名以小写开头
+  - key:            ParameterNaming.ParameterCase
+    value:          camelBack
+
+  # 局部变量名以小写开头
+  - key:            LocalVariableNaming.LocalVariableCase
+    value:          camelBack
+
+  # 全局变量名要求有前缀 'g'
+  - key:            GlobalVariableNaming.GlobalVariablePrefix
+    value:          g
+
+  # 全局变量名以大写开头
+  - key:            GlobalVariableNaming.GlobalVariableCase
+    value:          CamelCase
+

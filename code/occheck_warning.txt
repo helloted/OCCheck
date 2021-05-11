@@ -1,0 +1,8 @@
+Person.m:23:0: 行长度不应该超过80 [readability-line-length]
+Person.m:20:0: 缩进应该使用4个空格 [readability-indent]
+Person.m:36:0: 缩进应该使用4个空格 [readability-indent]
+Person.m:11:8: 不合规的命名：'the_key'，建议使用："THE_KEY"。期望的格式为："全部大写" [readability-identifier-naming]
+Person.m:18:8: 不合规的命名：'Speak'，建议使用："speak"。期望的格式为："小驼峰命名" [readability-identifier-naming]
+Person.m:23:40: 不合规的命名：'Name'，建议使用："name"。期望的格式为："小驼峰命名" [readability-identifier-naming]
+Person.m:33:7: 不合规的命名：'Talk'，建议使用："talk"。期望的格式为："小驼峰命名" [readability-identifier-naming]
+

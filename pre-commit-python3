@@ -1,0 +1,21 @@
+#!/usr/local/bin/python3
+# -*- coding: utf-8 -*-
+import os, time, re
+import sys
+sys.path.append(".git")
+from occheck import check_diff
+
+git_result = check_diff.git_diff()
+log_list = check_diff.check(git_result)
+isTerminal = os.isatty(sys.stdout.fileno())
+if len(log_list):
+    for log_text in log_list:
+        if isTerminal:
+            print("\033[1;31;40m{}".format(log_text))
+        else:
+            print(log_text)
+    sys.exit(1)
+else:
+    sys.exit(0)
+
+

@@ -1,0 +1,216 @@
+TranslationUnitDecl 0x7fa96682de08 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa96682e6a0 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa96682e3a0 '__int128'
+|-TypedefDecl 0x7fa96682e708 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa96682e3c0 'unsigned __int128'
+|-TypedefDecl 0x7fa96682e7a0 <<invalid sloc>> <invalid sloc> implicit SEL 'SEL *'
+| `-PointerType 0x7fa96682e760 'SEL *' imported
+|   `-BuiltinType 0x7fa96682e600 'SEL'
+|-TypedefDecl 0x7fa96682e878 <<invalid sloc>> <invalid sloc> implicit id 'id'
+| `-ObjCObjectPointerType 0x7fa96682e820 'id' imported
+|   `-ObjCObjectType 0x7fa96682e7f0 'id' imported
+|-TypedefDecl 0x7fa96682e958 <<invalid sloc>> <invalid sloc> implicit Class 'Class'
+| `-ObjCObjectPointerType 0x7fa96682e900 'Class' imported
+|   `-ObjCObjectType 0x7fa96682e8d0 'Class' imported
+|-ObjCInterfaceDecl 0x7fa96682e9a8 <<invalid sloc>> <invalid sloc> implicit Protocol
+|-TypedefDecl 0x7fa96682ece8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa96682eb00 'struct __NSConstantString_tag'
+|   `-Record 0x7fa96682ea70 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa96682ed80 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa96682ed40 'char *'
+|   `-BuiltinType 0x7fa96682dea0 'char'
+|-TypedefDecl 0x7fa96686be68 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa96686be10 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa96686bc90 'struct __va_list_tag'
+|     `-Record 0x7fa96686bc00 '__va_list_tag'
+|-ImportDecl 0x7fa96686cb48 <./MYViewController.h:9:1> col:1 implicit UIKit
+|-VarDecl 0x7fa96686cb98 <line:11:1, col:21> col:5 my_globle_var 'int' cinit
+| `-IntegerLiteral 0x7fa9669c4240 <col:21> 'int' 10
+|-ObjCInterfaceDecl 0x7fa9669d49c8 <line:15:1, line:17:2> line:15:12 MYViewController
+| |-super ObjCInterface 0x7fa9669c4480 'UIViewController'
+| `-ObjCImplementation 0x7fa9669e8fd0 'MYViewController'
+|-ImportDecl 0x7fa9669d4af0 <./Person.h:9:1> col:1 implicit Foundation
+|-VarDecl 0x7fa9669d4b40 <line:13:1, col:21> col:5 globle_person 'int' cinit
+| `-IntegerLiteral 0x7fa9669d4ba0 <col:21> 'int' 10
+|-ObjCInterfaceDecl 0x7fa9669d4bd8 <line:15:1, line:28:2> line:15:12 Person
+| |-super ObjCInterface 0x7fa9669c47b0 'NSObject'
+| |-ObjCIvarDecl 0x7fa9669d9340 <line:17:3, col:13> col:13 _name 'NSString *__strong' protected
+| |-ObjCIvarDecl 0x7fa9669d93d8 <line:18:3, col:7> col:7 _age 'int' protected
+| |-ObjCPropertyDecl 0x7fa9669d9598 <line:21:1, col:44> col:44 theCount 'NSInteger * _Nonnull':'NSInteger *' assign readwrite nonatomic unsafe_unretained
+| |-ObjCMethodDecl 0x7fa9669d96c0 <line:23:1, col:19> col:1 + personSpeak 'void'
+| |-ObjCMethodDecl 0x7fa9669df018 <line:25:1, col:58> col:1 - initWithName:age: 'instancetype _Nonnull':'id'
+| | |-ParmVarDecl 0x7fa9669df0c0 <col:30, col:41> col:41 name 'NSString * _Nonnull __strong':'NSString *__strong'
+| | |-ParmVarDecl 0x7fa9669df120 <col:51, col:55> col:55 age 'int'
+| | |-NSConsumesSelfAttr 0x7fa9669df190 <<invalid sloc>> Implicit
+| | `-NSReturnsRetainedAttr 0x7fa9669df1d0 <<invalid sloc>> Implicit
+| |-ObjCMethodDecl 0x7fa9669df220 <line:26:1, col:18> col:1 - personTalk 'void'
+| |-ObjCMethodDecl 0x7fa9669df2a0 <line:21:44> col:44 implicit - theCount 'NSInteger * _Nonnull':'NSInteger *'
+| `-ObjCMethodDecl 0x7fa9669df320 <col:44> col:44 implicit - setTheCount: 'void'
+|   `-ParmVarDecl 0x7fa9669df3a0 <col:44> col:44 theCount 'NSInteger * _Nonnull':'NSInteger *'
+|-VarDecl 0x7fa9669e8080 <MYViewController.m:14:9, col:25> col:13 used globleVar 'int' cinit
+| `-IntegerLiteral 0x7fa9669e80e0 <col:25> 'int' 1001
+|-ObjCCategoryDecl 0x7fa9669e8118 <line:16:1, line:21:2> line:16:12
+| |-ObjCInterface 0x7fa9669d49c8 'MYViewController'
+| |-ObjCPropertyDecl 0x7fa9669e8c00 <line:18:1, col:44> col:44 theName 'NSString *' readwrite nonatomic strong
+| |-ObjCMethodDecl 0x7fa9669e8c78 <col:44> col:44 implicit - theName 'NSString *'
+| |-ObjCMethodDecl 0x7fa9669e8cf8 <col:44> col:44 implicit - setTheName: 'void'
+| | `-ParmVarDecl 0x7fa9669e8d78 <col:44> col:44 theName 'NSString *'
+| |-ObjCPropertyDecl 0x7fa9669e8df0 <line:20:1, col:44> col:44 theAge 'NSInteger *' assign readwrite nonatomic unsafe_unretained
+| |-ObjCMethodDecl 0x7fa9669e8e68 <col:44> col:44 implicit - theAge 'NSInteger *'
+| `-ObjCMethodDecl 0x7fa9669e8ee8 <col:44> col:44 implicit - setTheAge: 'void'
+|   `-ParmVarDecl 0x7fa9669e8f68 <col:44> col:44 theAge 'NSInteger *'
+|-ObjCImplementationDecl 0x7fa9669e8fd0 <line:23:1, line:59:1> line:23:17 MYViewController
+| |-ObjCInterface 0x7fa9669d49c8 'MYViewController'
+| |-ObjCMethodDecl 0x7fa9669e9060 <line:25:1, line:35:1> line:25:1 - viewDidLoad 'void'
+| | |-ImplicitParamDecl 0x7fa966a3b490 <<invalid sloc>> <invalid sloc> implicit used self 'MYViewController *const __strong'
+| | |-ImplicitParamDecl 0x7fa966a3b4f0 <<invalid sloc>> <invalid sloc> implicit _cmd 'SEL':'SEL *'
+| | |-VarDecl 0x7fa966a3e920 <line:28:5, col:73> col:15 used startBtn 'UIButton *__strong' cinit
+| | | `-ExprWithCleanups 0x7fa966a3ebb8 <col:26, col:73> 'UIButton * _Nonnull':'UIButton *'
+| | |   `-ImplicitCastExpr 0x7fa966a3eba0 <col:26, col:73> 'UIButton * _Nonnull':'UIButton *' <ARCReclaimReturnedObject>
+| | |     `-ObjCMessageExpr 0x7fa966a3eb68 <col:26, col:73> 'UIButton * _Nonnull':'UIButton *' selector=buttonWithType: class='UIButton'
+| | |       `-ImplicitCastExpr 0x7fa966a3eb50 <col:51> 'UIButtonType':'enum UIButtonType' <IntegralCast>
+| | |         `-DeclRefExpr 0x7fa966a3e9b0 <col:51> 'NSInteger':'long' EnumConstant 0x7fa9669ff7d8 'UIButtonTypeContactAdd' 'NSInteger':'long'
+| | `-CompoundStmt 0x7fa966a3faa0 <line:25:21, line:35:1>
+| |   |-ObjCMessageExpr 0x7fa966a3b550 <line:26:5, col:23> 'void' selector=viewDidLoad super (instance)
+| |   |-DeclStmt 0x7fa966a3ebd0 <line:28:5, col:74>
+| |   | `-VarDecl 0x7fa966a3e920 <col:5, col:73> col:15 used startBtn 'UIButton *__strong' cinit
+| |   |   `-ExprWithCleanups 0x7fa966a3ebb8 <col:26, col:73> 'UIButton * _Nonnull':'UIButton *'
+| |   |     `-ImplicitCastExpr 0x7fa966a3eba0 <col:26, col:73> 'UIButton * _Nonnull':'UIButton *' <ARCReclaimReturnedObject>
+| |   |       `-ObjCMessageExpr 0x7fa966a3eb68 <col:26, col:73> 'UIButton * _Nonnull':'UIButton *' selector=buttonWithType: class='UIButton'
+| |   |         `-ImplicitCastExpr 0x7fa966a3eb50 <col:51> 'UIButtonType':'enum UIButtonType' <IntegralCast>
+| |   |           `-DeclRefExpr 0x7fa966a3e9b0 <col:51> 'NSInteger':'long' EnumConstant 0x7fa9669ff7d8 'UIButtonTypeContactAdd' 'NSInteger':'long'
+| |   |-PseudoObjectExpr 0x7fa966a3f110 <line:29:5, col:49> 'CGRect':'struct CGRect'
+| |   | |-BinaryOperator 0x7fa966a3f0b8 <col:5, col:49> 'CGRect':'struct CGRect' '='
+| |   | | |-ObjCPropertyRefExpr 0x7fa966a3f068 <col:5, col:14> '<pseudo-object type>' lvalue objcproperty Kind=PropertyRef Property="frame" Messaging=Setter
+| |   | | | `-OpaqueValueExpr 0x7fa966a3f048 <col:5> 'UIButton *'
+| |   | | |   `-ImplicitCastExpr 0x7fa966a3ec20 <col:5> 'UIButton *' <LValueToRValue>
+| |   | | |     `-DeclRefExpr 0x7fa966a3ebe8 <col:5> 'UIButton *__strong' lvalue Var 0x7fa966a3e920 'startBtn' 'UIButton *__strong'
+| |   | | `-OpaqueValueExpr 0x7fa966a3f098 <col:22, col:49> 'CGRect':'struct CGRect'
+| |   | |   `-CallExpr 0x7fa966a3efa0 <col:22, col:49> 'CGRect':'struct CGRect'
+| |   | |     |-ImplicitCastExpr 0x7fa966a3ef88 <col:22> 'CGRect (*)(CGFloat, CGFloat, CGFloat, CGFloat)' <FunctionToPointerDecay>
+| |   | |     | `-DeclRefExpr 0x7fa966a3ee90 <col:22> 'CGRect (CGFloat, CGFloat, CGFloat, CGFloat)' Function 0x7fa9669ffb50 'CGRectMake' 'CGRect (CGFloat, CGFloat, CGFloat, CGFloat)'
+| |   | |     |-ImplicitCastExpr 0x7fa966a3efe0 <col:33> 'CGFloat':'double' <IntegralToFloating>
+| |   | |     | `-IntegerLiteral 0x7fa966a3eeb0 <col:33> 'int' 100
+| |   | |     |-ImplicitCastExpr 0x7fa966a3f000 <col:38> 'CGFloat':'double' <IntegralToFloating>
+| |   | |     | `-IntegerLiteral 0x7fa966a3eed0 <col:38> 'int' 200
+| |   | |     |-ImplicitCastExpr 0x7fa966a3f018 <col:43> 'CGFloat':'double' <IntegralToFloating>
+| |   | |     | `-IntegerLiteral 0x7fa966a3eef0 <col:43> 'int' 50
+| |   | |     `-ImplicitCastExpr 0x7fa966a3f030 <col:47> 'CGFloat':'double' <IntegralToFloating>
+| |   | |       `-IntegerLiteral 0x7fa966a3ef10 <col:47> 'int' 50
+| |   | |-OpaqueValueExpr 0x7fa966a3f048 <col:5> 'UIButton *'
+| |   | | `-ImplicitCastExpr 0x7fa966a3ec20 <col:5> 'UIButton *' <LValueToRValue>
+| |   | |   `-DeclRefExpr 0x7fa966a3ebe8 <col:5> 'UIButton *__strong' lvalue Var 0x7fa966a3e920 'startBtn' 'UIButton *__strong'
+| |   | |-OpaqueValueExpr 0x7fa966a3f098 <col:22, col:49> 'CGRect':'struct CGRect'
+| |   | | `-CallExpr 0x7fa966a3efa0 <col:22, col:49> 'CGRect':'struct CGRect'
+| |   | |   |-ImplicitCastExpr 0x7fa966a3ef88 <col:22> 'CGRect (*)(CGFloat, CGFloat, CGFloat, CGFloat)' <FunctionToPointerDecay>
+| |   | |   | `-DeclRefExpr 0x7fa966a3ee90 <col:22> 'CGRect (CGFloat, CGFloat, CGFloat, CGFloat)' Function 0x7fa9669ffb50 'CGRectMake' 'CGRect (CGFloat, CGFloat, CGFloat, CGFloat)'
+| |   | |   |-ImplicitCastExpr 0x7fa966a3efe0 <col:33> 'CGFloat':'double' <IntegralToFloating>
+| |   | |   | `-IntegerLiteral 0x7fa966a3eeb0 <col:33> 'int' 100
+| |   | |   |-ImplicitCastExpr 0x7fa966a3f000 <col:38> 'CGFloat':'double' <IntegralToFloating>
+| |   | |   | `-IntegerLiteral 0x7fa966a3eed0 <col:38> 'int' 200
+| |   | |   |-ImplicitCastExpr 0x7fa966a3f018 <col:43> 'CGFloat':'double' <IntegralToFloating>
+| |   | |   | `-IntegerLiteral 0x7fa966a3eef0 <col:43> 'int' 50
+| |   | |   `-ImplicitCastExpr 0x7fa966a3f030 <col:47> 'CGFloat':'double' <IntegralToFloating>
+| |   | |     `-IntegerLiteral 0x7fa966a3ef10 <col:47> 'int' 50
+| |   | `-ObjCMessageExpr 0x7fa966a3f0d8 <col:14> 'void' selector=setFrame:
+| |   |   |-OpaqueValueExpr 0x7fa966a3f048 <col:5> 'UIButton *'
+| |   |   | `-ImplicitCastExpr 0x7fa966a3ec20 <col:5> 'UIButton *' <LValueToRValue>
+| |   |   |   `-DeclRefExpr 0x7fa966a3ebe8 <col:5> 'UIButton *__strong' lvalue Var 0x7fa966a3e920 'startBtn' 'UIButton *__strong'
+| |   |   `-OpaqueValueExpr 0x7fa966a3f098 <col:22, col:49> 'CGRect':'struct CGRect'
+| |   |     `-CallExpr 0x7fa966a3efa0 <col:22, col:49> 'CGRect':'struct CGRect'
+| |   |       |-ImplicitCastExpr 0x7fa966a3ef88 <col:22> 'CGRect (*)(CGFloat, CGFloat, CGFloat, CGFloat)' <FunctionToPointerDecay>
+| |   |       | `-DeclRefExpr 0x7fa966a3ee90 <col:22> 'CGRect (CGFloat, CGFloat, CGFloat, CGFloat)' Function 0x7fa9669ffb50 'CGRectMake' 'CGRect (CGFloat, CGFloat, CGFloat, CGFloat)'
+| |   |       |-ImplicitCastExpr 0x7fa966a3efe0 <col:33> 'CGFloat':'double' <IntegralToFloating>
+| |   |       | `-IntegerLiteral 0x7fa966a3eeb0 <col:33> 'int' 100
+| |   |       |-ImplicitCastExpr 0x7fa966a3f000 <col:38> 'CGFloat':'double' <IntegralToFloating>
+| |   |       | `-IntegerLiteral 0x7fa966a3eed0 <col:38> 'int' 200
+| |   |       |-ImplicitCastExpr 0x7fa966a3f018 <col:43> 'CGFloat':'double' <IntegralToFloating>
+| |   |       | `-IntegerLiteral 0x7fa966a3eef0 <col:43> 'int' 50
+| |   |       `-ImplicitCastExpr 0x7fa966a3f030 <col:47> 'CGFloat':'double' <IntegralToFloating>
+| |   |         `-IntegerLiteral 0x7fa966a3ef10 <col:47> 'int' 50
+| |   |-ExprWithCleanups 0x7fa966a3f498 <line:30:5, col:35> 'void'
+| |   | `-ObjCMessageExpr 0x7fa966a3f460 <col:5, col:35> 'void' selector=addSubview:
+| |   |   |-PseudoObjectExpr 0x7fa966a3f278 <col:6, col:11> 'UIView *'
+| |   |   | |-ObjCPropertyRefExpr 0x7fa966a3f200 <col:6, col:11> '<pseudo-object type>' lvalue objcproperty Kind=PropertyRef Property="view" Messaging=Getter
+| |   |   | | `-OpaqueValueExpr 0x7fa966a3f1e0 <col:6> 'MYViewController *'
+| |   |   | |   `-ImplicitCastExpr 0x7fa966a3f178 <col:6> 'MYViewController *' <LValueToRValue>
+| |   |   | |     `-DeclRefExpr 0x7fa966a3f140 <col:6> 'MYViewController *const __strong' lvalue ImplicitParam 0x7fa966a3b490 'self' 'MYViewController *const __strong'
+| |   |   | |-OpaqueValueExpr 0x7fa966a3f1e0 <col:6> 'MYViewController *'
+| |   |   | | `-ImplicitCastExpr 0x7fa966a3f178 <col:6> 'MYViewController *' <LValueToRValue>
+| |   |   | |   `-DeclRefExpr 0x7fa966a3f140 <col:6> 'MYViewController *const __strong' lvalue ImplicitParam 0x7fa966a3b490 'self' 'MYViewController *const __strong'
+| |   |   | `-ImplicitCastExpr 0x7fa966a3f260 <col:11> 'UIView *' <ARCReclaimReturnedObject>
+| |   |   |   `-ObjCMessageExpr 0x7fa966a3f230 <col:11> 'UIView *' selector=view
+| |   |   |     `-OpaqueValueExpr 0x7fa966a3f1e0 <col:6> 'MYViewController *'
+| |   |   |       `-ImplicitCastExpr 0x7fa966a3f178 <col:6> 'MYViewController *' <LValueToRValue>
+| |   |   |         `-DeclRefExpr 0x7fa966a3f140 <col:6> 'MYViewController *const __strong' lvalue ImplicitParam 0x7fa966a3b490 'self' 'MYViewController *const __strong'
+| |   |   `-ImplicitCastExpr 0x7fa966a3f448 <col:27> 'UIView * _Nonnull':'UIView *' <BitCast>
+| |   |     `-ImplicitCastExpr 0x7fa966a3f430 <col:27> 'UIButton *' <LValueToRValue>
+| |   |       `-DeclRefExpr 0x7fa966a3f1c0 <col:27> 'UIButton *__strong' lvalue Var 0x7fa966a3e920 'startBtn' 'UIButton *__strong'
+| |   |-ExprWithCleanups 0x7fa966a3f660 <line:31:5, col:35> 'void'
+| |   | `-ObjCMessageExpr 0x7fa966a3f628 <col:5, col:35> 'void' selector=addSubview:
+| |   |   |-PseudoObjectExpr 0x7fa966a3f5d0 <col:6, col:11> 'UIView *'
+| |   |   | |-ObjCPropertyRefExpr 0x7fa966a3f558 <col:6, col:11> '<pseudo-object type>' lvalue objcproperty Kind=PropertyRef Property="view" Messaging=Getter
+| |   |   | | `-OpaqueValueExpr 0x7fa966a3f538 <col:6> 'MYViewController *'
+| |   |   | |   `-ImplicitCastExpr 0x7fa966a3f4d0 <col:6> 'MYViewController *' <LValueToRValue>
+| |   |   | |     `-DeclRefExpr 0x7fa966a3f4b0 <col:6> 'MYViewController *const __strong' lvalue ImplicitParam 0x7fa966a3b490 'self' 'MYViewController *const __strong'
+| |   |   | |-OpaqueValueExpr 0x7fa966a3f538 <col:6> 'MYViewController *'
+| |   |   | | `-ImplicitCastExpr 0x7fa966a3f4d0 <col:6> 'MYViewController *' <LValueToRValue>
+| |   |   | |   `-DeclRefExpr 0x7fa966a3f4b0 <col:6> 'MYViewController *const __strong' lvalue ImplicitParam 0x7fa966a3b490 'self' 'MYViewController *const __strong'
+| |   |   | `-ImplicitCastExpr 0x7fa966a3f5b8 <col:11> 'UIView *' <ARCReclaimReturnedObject>
+| |   |   |   `-ObjCMessageExpr 0x7fa966a3f588 <col:11> 'UIView *' selector=view
+| |   |   |     `-OpaqueValueExpr 0x7fa966a3f538 <col:6> 'MYViewController *'
+| |   |   |       `-ImplicitCastExpr 0x7fa966a3f4d0 <col:6> 'MYViewController *' <LValueToRValue>
+| |   |   |         `-DeclRefExpr 0x7fa966a3f4b0 <col:6> 'MYViewController *const __strong' lvalue ImplicitParam 0x7fa966a3b490 'self' 'MYViewController *const __strong'
+| |   |   `-ImplicitCastExpr 0x7fa966a3f610 <col:27> 'UIView * _Nonnull':'UIView *' <BitCast>
+| |   |     `-ImplicitCastExpr 0x7fa966a3f5f8 <col:27> 'UIButton *' <LValueToRValue>
+| |   |       `-DeclRefExpr 0x7fa966a3f518 <col:27> 'UIButton *__strong' lvalue Var 0x7fa966a3e920 'startBtn' 'UIButton *__strong'
+| |   |-ObjCMessageExpr 0x7fa966a3f9f8 <line:32:5, col:102> 'void' selector=addTarget:action:forControlEvents:
+| |   | |-ImplicitCastExpr 0x7fa966a3f6f8 <col:6> 'UIButton *' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7fa966a3f678 <col:6> 'UIButton *__strong' lvalue Var 0x7fa966a3e920 'startBtn' 'UIButton *__strong'
+| |   | |-ImplicitCastExpr 0x7fa966a3f9c8 <col:25> 'id _Nullable':'id' <BitCast>
+| |   | | `-ImplicitCastExpr 0x7fa966a3f9b0 <col:25> 'MYViewController *' <LValueToRValue>
+| |   | |   `-DeclRefExpr 0x7fa966a3f698 <col:25> 'MYViewController *const __strong' lvalue ImplicitParam 0x7fa966a3b490 'self' 'MYViewController *const __strong'
+| |   | |-ObjCSelectorExpr 0x7fa966a3f6b8 <col:37, col:56> 'SEL':'SEL *' videoTest
+| |   | `-ImplicitCastExpr 0x7fa966a3f9e0 <col:75> 'UIControlEvents':'enum UIControlEvents' <IntegralCast>
+| |   |   `-DeclRefExpr 0x7fa966a3f6d8 <col:75> 'NSUInteger':'unsigned long' EnumConstant 0x7fa966a00638 'UIControlEventTouchUpInside' 'NSUInteger':'unsigned long'
+| |   `-BinaryOperator 0x7fa966a3fa80 <line:33:5, col:17> 'int' '='
+| |     |-DeclRefExpr 0x7fa966a3fa40 <col:5> 'int' lvalue Var 0x7fa9669e8080 'globleVar' 'int'
+| |     `-IntegerLiteral 0x7fa966a3fa60 <col:17> 'int' 20
+| |-ObjCMethodDecl 0x7fa966a00a80 <line:37:1, line:39:1> line:37:1 - compareWithName: 'void'
+| | |-ImplicitParamDecl 0x7fa966a3fb00 <<invalid sloc>> <invalid sloc> implicit self 'MYViewController *const __strong'
+| | |-ImplicitParamDecl 0x7fa966a3fb60 <<invalid sloc>> <invalid sloc> implicit _cmd 'SEL':'SEL *'
+| | |-ParmVarDecl 0x7fa966a00b00 <col:26, col:37> col:37 myName 'NSString *__strong'
+| | `-CompoundStmt 0x7fa966a3fbc0 <col:43, line:39:1>
+| |-ObjCMethodDecl 0x7fa966a00b90 <line:41:1, line:43:1> line:41:1 - videoTest 'void'
+| | |-ImplicitParamDecl 0x7fa966a3fc00 <<invalid sloc>> <invalid sloc> implicit self 'MYViewController *const __strong'
+| | |-ImplicitParamDecl 0x7fa966a3fc60 <<invalid sloc>> <invalid sloc> implicit _cmd 'SEL':'SEL *'
+| | |-VarDecl 0x7fa966a3fcd8 <line:42:1, col:15> col:5 testAge 'int' cinit
+| | | `-IntegerLiteral 0x7fa966a3fd38 <col:15> 'int' 10
+| | `-CompoundStmt 0x7fa966a3fd70 <line:41:18, line:43:1>
+| |   `-DeclStmt 0x7fa966a3fd58 <line:42:1, col:17>
+| |     `-VarDecl 0x7fa966a3fcd8 <col:1, col:15> col:5 testAge 'int' cinit
+| |       `-IntegerLiteral 0x7fa966a3fd38 <col:15> 'int' 10
+| |-ObjCMethodDecl 0x7fa966a00c28 <line:45:1, line:48:1> line:45:1 - buildName 'NSString *'
+| | |-ImplicitParamDecl 0x7fa966a3fdd0 <<invalid sloc>> <invalid sloc> implicit self 'MYViewController *const __strong'
+| | |-ImplicitParamDecl 0x7fa966a3fe30 <<invalid sloc>> <invalid sloc> implicit _cmd 'SEL':'SEL *'
+| | |-VarDecl 0x7fa966a3fea8 <line:46:5, col:24> col:16 used name 'NSString *__strong' cinit
+| | | `-ObjCStringLiteral 0x7fa966a3ff68 <col:23, col:24> 'NSString *'
+| | |   `-StringLiteral 0x7fa966a3ff48 <col:24> 'char [6]' lvalue "jello"
+| | `-CompoundStmt 0x7fa966a43428 <line:45:24, line:48:1>
+| |   |-DeclStmt 0x7fa966a3ff88 <line:46:5, col:31>
+| |   | `-VarDecl 0x7fa966a3fea8 <col:5, col:24> col:16 used name 'NSString *__strong' cinit
+| |   |   `-ObjCStringLiteral 0x7fa966a3ff68 <col:23, col:24> 'NSString *'
+| |   |     `-StringLiteral 0x7fa966a3ff48 <col:24> 'char [6]' lvalue "jello"
+| |   `-ReturnStmt 0x7fa966a43418 <line:47:5, col:12>
+| |     `-ImplicitCastExpr 0x7fa966a43400 <col:12> 'NSString *' <ARCProduceObject>
+| |       `-ImplicitCastExpr 0x7fa966a3ffd8 <col:12> 'NSString *' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fa966a3ffa0 <col:12> 'NSString *__strong' lvalue Var 0x7fa966a3fea8 'name' 'NSString *__strong'
+| |-ObjCIvarDecl 0x7fa966a3b000 <line:18:44> col:44 implicit _theName 'NSString *__strong' synthesize private
+| |-ObjCPropertyImplDecl 0x7fa966a3b058 <<invalid sloc>, col:44> <invalid sloc> theName synthesize
+| | |-ObjCProperty 0x7fa9669e8c00 'theName'
+| | `-ObjCIvar 0x7fa966a3b000 '_theName' 'NSString *__strong'
+| |-ObjCIvarDecl 0x7fa966a3b270 <line:20:44> col:44 implicit _theAge 'NSInteger *' synthesize private
+| `-ObjCPropertyImplDecl 0x7fa966a3b2c8 <<invalid sloc>, col:44> <invalid sloc> theAge synthesize
+|   |-ObjCProperty 0x7fa9669e8df0 'theAge'
+|   `-ObjCIvar 0x7fa966a3b270 '_theAge' 'NSInteger *'
+`-<undeserialized declarations>
