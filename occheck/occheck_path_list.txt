@@ -1,0 +1,5 @@
+
+# OCCheck的git检测目录，目录下的文件变动，会进入检测步骤
+ghp_stopCheck
+src/
+Modules/

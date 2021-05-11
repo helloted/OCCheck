@@ -21,7 +21,7 @@ CheckOptions:
   value: '4'
 - key: ClassNaming.ClassCase
   value: CamelCase
-Checks: MaxLineLength,Copyright,GlobalVariableNaming,MissingDocProtocol,ParameterNaming,MaxLinesPerFunction,MissingDocInterface,FunctionNaming,ParameterCount,LocalVariableNaming,MethodNaming,MacroNaming,Indent,MissingDocProperty,ClassNaming
+Checks: MaxLineLength,GlobalVariableNaming,MissingDocProtocol,ParameterNaming,MaxLinesPerFunction,MissingDocInterface,FunctionNaming,ParameterCount,LocalVariableNaming,MethodNaming,MacroNaming,Indent,MissingDocProperty,ClassNaming
 IncrmentFiles: ''
 SkipPaths:
 - .*/\.svn/.*

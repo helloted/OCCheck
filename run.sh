@@ -10,6 +10,8 @@ curl -L https://raw.githubusercontent.com/helloted/OCCheck/main/ghp_occheck.zip 
 mkdir -p -m 777 .git/occheck
 unzip -o ghp_occheck.zip -d .git/occheck
 rm -f ghp_occheck.zip
+mv occheck/occheck_path_list.txt ./
+
 echo -e "\033[32m\033[01m\033[05m occheck success\033[0m"
 
 #pre-commit
@@ -19,6 +21,8 @@ mkdir -p -m 777 .git/hooks
 mv pre-commit .git/hooks/
 chmod +x  .git/hooks/pre-commit
 echo -e "\033[32m\033[01m\033[05m pre-commit success\033[0m"
+
+rm -f run.sh
 
 
 

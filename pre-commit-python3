@@ -1,11 +1,30 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
-import os, time, re
+import os
 import sys
 sys.path.append(".git")
 from occheck import check_diff
 
-git_result = check_diff.git_diff()
+check_path_list = []
+check_file = 'occheck_path_list.txt'
+if os.path.exists(check_file):
+    for line in open(check_file):
+        line = line.strip('\n')
+        if 'ghp_stopCheck' in line:  # 不检测
+            sys.exit(0)
+        if len(line) and not line.startswith('#'):
+            if os.path.exists(line):
+                check_path_list.append(line)
+            else:
+                print('{} 不存在'.format(line))
+else:
+    print('没有配置检测目录文件:occheck_path_list.txt')
+    sys.exit(1)
+
+if not len(check_path_list):
+    print('检测目录为空')
+    sys.exit(1)
+git_result = check_diff.git_diff(check_path_list)
 log_list = check_diff.check(git_result)
 isTerminal = os.isatty(sys.stdout.fileno())
 if len(log_list):

@@ -2,15 +2,14 @@ import os
 import re
 import time
 
-check_paths = ['a/', 'code/']
-git_diff_path = " ".join(check_paths)
-git_temp_path = '.git/diff_git_temp'
-grep_str = '| grep -v -e \'^[+-]\' -e \'^index\''
 
-
-def git_diff():
+def git_diff(check_path_list):
+    git_diff_path = " ".join(check_path_list)
+    git_temp_path = '.git/diff_git_temp'
+    grep_str = '| grep -v -e \'^[+-]\' -e \'^index\''
     if os.path.exists(git_temp_path):
         os.remove(git_temp_path)
+        
     command = 'git diff HEAD --cached -U0 -- $(find {} -name *.m -o -name *.h) --diff-filter=AM {} > {}'.format(
         git_diff_path, grep_str, git_temp_path)
     os.system(command)
@@ -70,23 +69,24 @@ def check(git_dit):
         # print(file_path)
         # print(ranges)
         out_temp = '.git/ghp_temp_out'
-        command = 'java -jar occheck/occheck.jar --output {} --format text --config occheck/config.xml {}'.format(
+        command = 'java -jar .git/occheck/occheck.jar --output {} --format text --config .git/occheck/config.xml {}'.format(
             out_temp,
             file_path)
         os.system(command)
 
-        # 整个文件的检测结果，看看是否在这次修改范围之内
-        for line in open(out_temp):
-            line = line.strip('\n')
-            m = re.match(pattern, line)
-            if m is not None and len(m.groups()) == 2:
-                line_num = m.groups()[1]
-                if len(line_num):
-                    line_num = int(line_num)
+        if os.path.exists(out_temp):
+            # 整个文件的检测结果，看看是否在这次修改范围之内
+            for line in open(out_temp):
+                line = line.strip('\n')
+                m = re.match(pattern, line)
+                if m is not None and len(m.groups()) == 2:
+                    line_num = m.groups()[1]
+                    if len(line_num):
+                        line_num = int(line_num)
 
-                for diff in ranges:
-                    if diff.start_num <= line_num <= diff.end_num:
-                        log_list.append(line)
+                    for diff in ranges:
+                        if diff.start_num <= line_num <= diff.end_num:
+                            log_list.append(line)
 
         time_end = time.time()
         print(
@@ -115,4 +115,3 @@ class DiffRange:
     def __init__(self):
         self.start_num = None
         self.end_num = None
-

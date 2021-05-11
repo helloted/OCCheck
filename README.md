@@ -22,3 +22,9 @@ bash <(curl -L -s https://raw.githubusercontent.com/helloted/OCCheck/main/run.sh
 
 ```
 
+#### 三、特殊操作
+
+1、停止检测
+
+在occheck_path_list.txt加上ghp_stopCheck字样
+
