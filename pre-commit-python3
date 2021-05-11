@@ -11,6 +11,7 @@ if os.path.exists(check_file):
     for line in open(check_file):
         line = line.strip('\n')
         if 'ghp_stopCheck' in line:  # 不检测
+            print('不检测')
             sys.exit(0)
         if len(line) and not line.startswith('#'):
             if os.path.exists(line):
