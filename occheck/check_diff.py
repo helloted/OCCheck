@@ -9,9 +9,10 @@ def git_diff(check_path_list):
     grep_str = '| grep -v -e \'^[+-]\' -e \'^index\''
     if os.path.exists(git_temp_path):
         os.remove(git_temp_path)
-        
-    command = 'git diff HEAD --cached -U0 -- $(find {} -name *.m -o -name *.h) --diff-filter=AM {} > {}'.format(
+
+    command = 'git diff HEAD --cached -U0 -- {} --diff-filter=AM {} > {}'.format(
         git_diff_path, grep_str, git_temp_path)
+    print(command)
     os.system(command)
     result_path = '.git/check.txt'
     if os.path.exists(result_path):
@@ -19,6 +20,7 @@ def git_diff(check_path_list):
     file_path = ''
     diff_index_list = []
     result_dic = {}
+    start_pick_index = False
     for line in open(git_temp_path):
         line = line.strip('\n')
         if line.startswith(
@@ -28,9 +30,19 @@ def git_diff(check_path_list):
             last_file_path = file_path
             if m is not None and len(m.groups()) == 1:
                 file_path = m.groups()[0]
+                extension = os.path.splitext(file_path)[1]
+                print(file_path)
+
                 if len(last_file_path) and len(diff_index_list):
                     result_dic[last_file_path] = diff_index_list
+                if extension == '.h' or extension == '.m':  # .h和.m文件才去提取参数
+                    start_pick_index = True
+                else:
+                    start_pick_index = False
                 diff_index_list = []
+
+        if not start_pick_index:
+            continue
 
         if line.startswith(
                 '@@ -'):  # 提取 @@ -20,0 +21,2 @@ @interface MYViewController ()
@@ -110,6 +122,7 @@ def check(git_dit):
     if os.path.exists('log.log'):
         os.remove('log.log')
     return log_list
+
 
 class DiffRange:
     def __init__(self):
