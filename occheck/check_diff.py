@@ -12,7 +12,6 @@ def git_diff(check_path_list):
 
     command = 'git diff HEAD --cached -U0 -- {} --diff-filter=AM {} > {}'.format(
         git_diff_path, grep_str, git_temp_path)
-    print(command)
     os.system(command)
     result_path = '.git/check.txt'
     if os.path.exists(result_path):
@@ -31,7 +30,6 @@ def git_diff(check_path_list):
             if m is not None and len(m.groups()) == 1:
                 file_path = m.groups()[0]
                 extension = os.path.splitext(file_path)[1]
-                print(file_path)
 
                 if len(last_file_path) and len(diff_index_list):
                     result_dic[last_file_path] = diff_index_list
