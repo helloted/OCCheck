@@ -19,11 +19,11 @@ if os.path.exists(check_file):
             else:
                 print('{} 不存在'.format(line))
 else:
-    print('没有配置检测目录文件:occheck_path_list.txt')
+    print('根目录没有配置检测目录文件:occheck_path_list.txt')
     sys.exit(1)
 
 if not len(check_path_list):
-    print('检测目录为空,请检查occheck_path_list.txt')
+    print('检测目录为空,请检查根目录下的occheck_path_list.txt')
     sys.exit(1)
 git_result = check_diff.git_diff(check_path_list)
 log_list = check_diff.check(git_result)
