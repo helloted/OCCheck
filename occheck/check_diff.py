@@ -1,5 +1,3 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
 import os
 import re
 import time
@@ -111,7 +109,7 @@ def check(git_dit):
 
     total_end = time.time()
     print(
-        'Finished {} files, total Cost Time: {}s\n'.format(
+        'Finished {} files, total Cost Time: {}s'.format(
             files_count,
             round(
                 total_end -

@@ -1,0 +1,5 @@
+{
+  "open": false,
+  "checkPath": ["src/","Modules/"],
+  "showLog":false 
+}

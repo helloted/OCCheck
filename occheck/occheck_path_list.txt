@@ -1,4 +1,0 @@
-
-# OCCheck的git检测目录，目录下的文件变动，会进入检测步骤，把ghp_stopCheck放在前面则停止检测
-src/
-Modules/

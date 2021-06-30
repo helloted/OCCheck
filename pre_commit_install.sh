@@ -11,7 +11,7 @@ fi
     mkdir -p -m 777 .git/occheck
     unzip -o ghp_occheck.zip -d .git/occheck
     rm -f ghp_occheck.zip
-    mv .git/occheck/occheck_path_list.txt ./
+    mv .git/occheck/OCCheckConfig.json ./
 }&&{
     echo -e "\033[32m\033[01m\033[05m occheck success\033[0m"
 }
@@ -26,6 +26,8 @@ fi
 }&&{
     echo -e "\033[32m\033[01m\033[05m pre-commit success\033[0m"
 }
+
+
 
 
 
